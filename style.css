@@ -26,17 +26,22 @@ body {
 }
 
 /* Анимация загрузки рядом с заголовком */
-.file-manager h1 .loader {
-    font-size: 16px;
-    margin-left: 10px;
+#loading-spinner {
+    display: none;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #7d7f80;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
     animation: spin 2s linear infinite;
-}
-
-/* Анимация вращения */
-@keyframes spin {
+    margin-left: 10px;
+  }
+  
+  @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-}
+  }
+  
 
 /* Навигационная панель */
 .file-manager .search-bar {
@@ -60,11 +65,15 @@ body {
 
 /* Блок текущего пути до директории */
 .current-path {
-    margin-left: 4%;
-    margin-right: 2%;
+    margin-left: 6px;
+    margin-right: 6px;
     font-size: 16px;
     min-width: 10px;
-    max-width: 200px;
+    width: 100%;
+    white-space: nowrap;
+    overflow: scroll;
+    height: 30px;
+    margin-top: 10px;
 }
 
 /* Блоки файлов */
@@ -91,6 +100,7 @@ body {
     text-decoration: none;
     color: inherit;
     margin-left: 10px;
+    width: 350px;
 }
 
 /* Кнопка сортировки */
@@ -144,22 +154,17 @@ a.name:active {
 .block-current-path {
     background-color: #e4e4e4;
     border-radius: 7px;
-    height: 30px;
+    height: 40px;
     display: flex;
     align-items: center;
     margin-left: 10px;
-    width: 50%;
+    width: 70%;
 }
 
 /* Стили для размера файла */
 .size {
     margin-left: auto;
     margin-right: 3%;
-}
-
-/* Стили для типа файла */
-.type {
-    margin-left: auto;
 }
 
 /* Стили для блоков с директориями */

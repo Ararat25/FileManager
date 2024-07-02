@@ -7,53 +7,18 @@
   <link href="style.css" rel="stylesheet">
 <body>
     <div class="file-manager">
-        <h1>Менеджер файлов <span class="loader">⏳</span></h1>
+        <h1>Менеджер файлов <div id="loading-spinner"></div></h1>
         <div class="search-bar">
-            <button class="back-button"></button>
+            <button class="back-button" onclick="backPath()"></button>
             <div class="block-current-path">
-                <div class="current-path">/home/usr</div>
+                <div class="current-path" id="current-path">../../</div>
             </div>
             <button class="sort-button"></button>
         </div>
-        <div class="file-list">
-            <div class="file-item" id="directory-item">
-                <div class="directory-icon"></div>
-                <a href="#" class="name">Название директории</a>
-                <span class="type">директория</span>
-                <span class="size">размер</span>
-            </div>
-            <div class="file-item" id="directory-item">
-                <div class="directory-icon"></div>
-                <a href="#" class="name">Название директории</a>
-                <span class="type">директория</span>
-                <span class="size">размер</span>
-            </div>
-            <div class="file-item">
-                <div class="file-icon"></div>
-                <div class="name">Название файла</div>
-                <span class="type">файл</span>
-                <span class="size">размер</span>
-            </div>
-            <div class="file-item">
-                <div class="file-icon"></div>
-                <div class="name">Название файла</div>
-                <span class="type">файл</span>
-                <span class="size">размер</span>
-            </div>
-            <div class="file-item" id="directory-item">
-                <div class="directory-icon"></div>
-                <a href="#" class="name">Название директории</a>
-                <span class="type">директория</span>
-                <span class="size">размер</span>
-            </div>
-            <div class="file-item">
-                <div class="file-icon"></div>
-                <div class="name">Название файла</div>
-                <span class="type">файл</span>
-                <span class="size">размер</span>
-            </div>
+        <div class="file-list" id="file-list">
         </div>
     </div>
     </main>
+    <script src="script.js"></script>
 </body>
 </html>
